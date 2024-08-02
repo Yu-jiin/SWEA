@@ -11,13 +11,14 @@ for test_case in range(1, T + 1):
     count = 0   # 제일 큰 카운트
     now = 1     # 현재
 
-    for i in range(0, N):
-        if C[i] + 1 == C[i+1]:
+    for i in range(1, N):
+        if C[i] > C[i-1]:
             now += 1
         else:
             if count < now:
                 count = now
             now = 1
+        if now > count:
+            count = now
 
     print(f'#{test_case} {count}')
-

@@ -7,10 +7,11 @@ for test_case in range(1, T + 1):
     for n in range(1, N + 1):
         n = str(n)
         count = 0
-        if n in '369':
-            count += 1
+        for a in n:
+            if a in '369':
+                count += 1
         if count > 0:
-            result.append('-')
+            result.append('-'*count)
         else:
             result.append(n)
 

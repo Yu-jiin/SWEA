@@ -19,7 +19,7 @@ for tc in range(1, T+1):
             nj = col + dj[x]
             if 0 <= ni < N and 0 <= nj < N:
                 if data[ni][nj] == 1:
-                    data[row][col] = 0
+                    data[row][col] = 0  # 지나온 곳은 0으로 표시해서 델타가 가지 못하게
                     row = ni
                     col = nj
                     break

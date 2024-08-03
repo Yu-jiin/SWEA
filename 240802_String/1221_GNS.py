@@ -2,29 +2,28 @@ T = int(input())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
 for test_case in range(1, T + 1):
     tc, N = input().split()
-    leng = int(N)
-    # print(leng)
     arr = list(input().split())
-    # print(arr)
+
     counts = [0] * 10
-    temp = [0] * leng
+    N = int(N)
+    temp = [0] * N
 
-    numbers = ['ZRO', 'ONE', 'TWO', 'THR', 'FOR', 'FIV', 'SIX']
+    # numbers = ['ZRO', 'ONE', 'TWO', 'THR', 'FOR', 'FIV', 'SIX', 'SVN', 'EGT', 'NIN']
+    number = {'ZRO' : 0, 'ONE' : 1, 'TWO' : 2, 'THR' : 3, 'FOR' : 4, 'FIV' : 5, 'SIX' : 6, 'SVN' : 7, 'EGT' : 8, 'NIN' : 9}
+    # print(number)
 
-    # 그냥 딕셔너리 만드는건 어떠니 지인아 ?ㅓㅂ ㅕㅇ신같은 짓 그만두고
-    for x in arr:
-        if x == 'ZRO':
-            counts[0] += 1
-        if x == 'ONE':  # 이렇게 하고싶으면 elif
-            counts[1] += 1
-        if x == 'TWO':
-            counts[2] += 1
-        if x == 'THR':
-            counts[3] += 1
-        if x == 'FOR':
-            counts[4] += 1
-        if x == 'FIV':
-            counts[5] += 1
+    for i in range(N):
+        counts[number[arr[i]]] += 1
+    # print(counts)
 
+    for i in range(1, 10):
+        counts[i] += counts[i-1]
     print(counts)
 
+    for i in range(N-1, -1, -1):
+        index = counts[number[arr[i]]] - 1
+        temp[index] = arr[i]
+        counts[number[arr[i]]] -= 1
+
+    print(f'#{test_case}')
+    print(*temp)

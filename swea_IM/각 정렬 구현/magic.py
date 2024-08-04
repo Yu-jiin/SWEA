@@ -12,7 +12,7 @@ max_count = 0
 for i in range(N):
     for j in range(N):
         for a in range(1, K+1):
-            target = arr[i][j]  # 꼭 여기에 들어가야하는데 왜 ㅅㅂ
+            target = arr[i][j]  # 꼭 여기에 들어가야하는데 왜
             for x in range(4):
                 ni = i + (di[x] * a)
                 nj = j + (dj[x] * a)

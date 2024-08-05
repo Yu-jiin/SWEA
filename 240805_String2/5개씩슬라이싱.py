@@ -5,3 +5,4 @@ for i in range(5):
     for j in range(5):
         for k in range(j+1, 6):
             print(arr1[i][j+k])
+

@@ -6,7 +6,9 @@ for test_case in range(1, T + 1):
 
     # print(arr)
 
-    for i in range(N):
-        for j in range(N):
-            print(arr[:i])
+    # # 가로부터 비교
+    # new_lst = []
+    # for i in arr:
+    #     for j in range(1, N):
+    #         arr[i: i+j]
 

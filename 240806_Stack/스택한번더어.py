@@ -8,7 +8,8 @@ for tc in range(1, T+1):
         if w == '(':
             stack.append(w)
         elif w == ')':  # 괄호 닫힐때,
-            if not stack or stack[-1] == ')':
+            if not stack:
+                # result = -1
                 break
             stack.pop()
     else:
@@ -16,3 +17,4 @@ for tc in range(1, T+1):
             result = 1
 
     print(f'#{tc} {result}')
+

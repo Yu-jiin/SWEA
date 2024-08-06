@@ -12,8 +12,6 @@ for tc in range(1, T+1):
                 stack.append(w)
             elif w == stack[-1]:
                 stack.pop()
-            if not stack:
-                result = 0
 
     result = len(stack)
     print(f'#{tc} {result}')

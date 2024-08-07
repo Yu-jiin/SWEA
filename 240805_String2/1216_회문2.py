@@ -24,6 +24,7 @@ arr = [[1,2,3,4,5,6,7,8,9,10] for _ in range(N)]
 #         slice_part = row[start:end]
 #         print(f'Row {i}, Slice {start}:{end} -> {slice_part}')
 
+
 # #  열 5개씩 슬라이싱
 # slice_l = 5
 # for j in range(M):

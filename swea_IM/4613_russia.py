@@ -29,14 +29,13 @@ for tc in range(1, T+1):
         if arr[1+i][N-1-i] != 'W':
             white_count += 1
             arr[1+i][N-1-i] = 'W'
-
         for j in range(N-1-i, N-1-i-j):
+            pass
 
-
-        # w = arr[i].count('W')
-        # b = arr[i].count('B')
-        # r = arr[i].count('A')
-        # print(f'w = {w}, b = {b}, r = {r}')
+# w = arr[i].count('W')
+# b = arr[i].count('B')
+# r = arr[i].count('A')
+# print(f'w = {w}, b = {b}, r = {r}')
 
     
 

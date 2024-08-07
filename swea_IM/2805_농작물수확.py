@@ -10,11 +10,13 @@ for tc in range(1, T+1):
     for i in range(N):
         for j in range(left, right+1):
             total += arr[i][j]
-        if i == N//2:
-            left += 1
-            right -= 1
-        else:
+        if i < N//2:
             left -= 1
             right += 1
-    print(total)
+        else:
+            left += 1
+            right -= 1
+
+
+    print(f'#{tc} {total}')
 

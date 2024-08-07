@@ -14,15 +14,16 @@
 def DFS(s, V):      # s-시작, V-1번부터 정점인 마지막 정점(정점개수)
     visited = [0] * (V+1)    # 방문한 정점 표시
     stack = []
-    print(f'#시작갈비 {s}')
+    result = [s]
+    # print(result)
     visited[s] = 1  # 시작 정점 방문 표시
-    v = s
+    v = s   # 현재 위치 현재 위치는 계속 바뀌니까
     while True:
         for w in adjL[v]:   # v에 인접하고, 방문안한 w 가 있으면
             if visited[w] == 0:  # 아직 방문 안했으면
                 stack.append(v)  # push(v) 현재 정점을 push하고
                 v = w            # w에 방문
-                print(v)
+                result.append(v)
                 visited[w] = 1     # w에 방문 표시
                 break            # v부터 다시 탐색 for의 break
         else:                   # 남은 인접 정점이 없어서 break가 걸리지 않은 경우 for else
@@ -31,8 +32,11 @@ def DFS(s, V):      # s-시작, V-1번부터 정점인 마지막 정점(정점�
             else:           # 남은 갈림길 없으면, 되돌아갈 곳이 없으면 탐색 종료
                 break   # while 문의 break
 
+    r = '-'.join(map(str, result))
+    print(f'#{tc} {r}')
 
-T = int(input())
+
+T = 1
 for tc in range(1, T+1):
     V, E = map(int, input().split())    # V = 마지막 7   E = 8쌍
     arr = list(map(int, input().split()))

@@ -10,3 +10,7 @@ def fibo(n):
 
 
 print(fibo(7))
+
+c = [8, 3, 10]
+
+print(c)

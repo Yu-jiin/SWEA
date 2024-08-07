@@ -35,13 +35,14 @@ def DFS(s, V):      # s-시작, V-1번부터 정점인 마지막 정점(정점�
 T = int(input())
 for tc in range(1, T+1):
     V, E = map(int, input().split())    # V = 마지막 7   E = 8쌍
-    adjL = [[] for _ in range(V+1)]     # V + 1
     arr = list(map(int, input().split()))
+    adjL = [[] for _ in range(V+1)]     # V + 1
     # 두개씩 가져오는 작업
     for i in range(E):
         v1, v2 = arr[i*2], arr[i*2+1]   # 정점1, 정점2
         adjL[v1].append(v2)
         adjL[v2].append(v1)
     print(adjL)
+
     DFS(1, V)
 

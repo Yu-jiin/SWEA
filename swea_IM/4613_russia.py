@@ -12,31 +12,25 @@ for tc in range(1, T+1):
             if arr[N-1][j] != 'R':
                 count += 1
                 arr[N-1][j] = 'R'
-            # if
-    total = count
-    # print(count)
+    print(count)
     # print(arr)
-    max_color = 0   # 행마다 제일 많은 색깔 개수 
 
-    print('--------------------')
-    # 흰
-    white_count = 0
-    blue_count = 0
-    red_count = 0
-    for i in range(1+i, N-1-i):
-        # for j in range(M):
-        print(arr[i])
-        if arr[1+i][N-1-i] != 'W':
-            white_count += 1
-            arr[1+i][N-1-i] = 'W'
-        for j in range(N-1-i, N-1-i-j):
-            pass
+    # print('--------------------')
+    min_value = 1000000
 
-# w = arr[i].count('W')
-# b = arr[i].count('B')
-# r = arr[i].count('A')
-# print(f'w = {w}, b = {b}, r = {r}')
+    for a in range(1, N-1):
+        for b in range(a+1, N):
+            count1 = 0
+            for i in range(1, a):   # 흰 파 빨 나누는 기준점을 a, b 로 잡기
+                count1 += sum(1 for j in range(M) if arr[i][j] != 'W')
+            for i in range(a, b):
+                count1 += sum(1 for j in range(M) if arr[i][j] != 'B')
+            for i in range(b, N - 1):
+                count1 += sum(1 for j in range(M) if arr[i][j] != 'R')
 
+            if min_value > count1:
+                min_value = count1
     
+    total = min_value + count
 
-    print(f'#{tc} {count}')
+    print(f'#{tc} {total}')

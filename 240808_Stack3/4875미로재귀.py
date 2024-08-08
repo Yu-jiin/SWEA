@@ -22,9 +22,10 @@ def fstart(N):
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())
-    maze = [list(input()) for _ in range(N)]
+    maze = [list(map(int, input())) for _ in range(N)]
 
     # 출발위치 찾기
     sti, stj = fstart(N)
 
     visited = [[0] * N for _ in range(N)]
+    print(f'{dfs2(sti,stj,N)}')

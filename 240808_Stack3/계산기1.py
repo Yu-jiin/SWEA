@@ -17,16 +17,30 @@ def make_postfix(postfix):
         result += stack[-1]
         stack.pop()
 
-    return result
+    return calcu(result)
 
 
 def calcu(result):
     total = 0
+    stack = []
 
+    for n in result:
+        if n.isdigit():
+            stack.append(n)
+        else:
+            first = stack.pop()
+            end = stack.pop()
+            sum_v = int(first) + int(end)
+            stack.append(sum_v)
+    while stack:
+        total = stack.pop()
+
+    return total
 
 T = 10
 for tc in range(1, T+1):
     str_len = int(input())
     postfix = list(map(str,input()))
 
-    print(make_postfix(postfix))
+    answer = make_postfix(postfix)
+    print(f'#{tc} {answer}')

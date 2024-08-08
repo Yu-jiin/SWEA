@@ -12,14 +12,15 @@ for tc in range(1, T + 1):
     for n in range(len(postFix)):
         if postFix[n].isdigit():
             result.append(postFix[n])
-        elif n in dict:
-            if stack and dic[stack[-1]] >= dic[n]:
+        elif postFix[n] in dic:
+            while stack and stack[-1] in dic and dic[stack[-1]] >= dic[postFix[n]]:
                 result.append(stack.pop())
-            stack.append(n)
+            stack.append(postFix[n])
 
     while stack:
         result.append(stack.pop())
 
-    print(' '.join(result))
+    answer = ''.join(result)
+    print(f'#{tc} {answer}')
 
 

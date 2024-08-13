@@ -16,26 +16,40 @@
 # rear = (rear + 1)mod n    삽입
 # front = (front + 1)mod n  삭제
 
-cQ = 4
-Q_SIZE = 4
-front = rear = 0
+# cQ = 4
+# Q_SIZE = 4
+# front = rear = 0
+#
+# rear = (rear + 1) % Q_SIZE   # enq(1)
+# cQ[rear] = 1
+#
+# rear = (rear + 1) % Q_SIZE   # enq(2)
+# cQ[rear] = 2
+#
+# rear = (rear + 1) % Q_SIZE   # enq(3)
+# cQ[rear] = 3
+#
+# front = (front + 1) % Q_SIZE
+# print(cQ[front])
+#
+# front = (front + 1) % Q_SIZE
+# print(cQ[front])
+#
+# front = (front + 1) % Q_SIZE
+# print(cQ[front])
 
-rear = (rear + 1) % Q_SIZE   # enq(1)
-cQ[rear] = 1
 
-rear = (rear + 1) % Q_SIZE   # enq(2)
-cQ[rear] = 2
+# list_q = []
+# for i in range(10000):
+#     list_q.append(i)
+# for _ in range(1000):
+#     list_q.pop(0)
+# print('end')
 
-rear = (rear + 1) % Q_SIZE   # enq(3)
-cQ[rear] = 3
-
-front = (front + 1) % Q_SIZE
-print(cQ[front])
-
-front = (front + 1) % Q_SIZE
-print(cQ[front])
-
-front = (front + 1) % Q_SIZE
-print(cQ[front])
-
-
+from collections import deque
+deque_q = deque()
+for i in range(10000):
+    deque_q.append(i)
+for _ in range(100):
+    deque_q.popleft()
+print('end')

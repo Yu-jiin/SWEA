@@ -22,22 +22,26 @@ def main(Switch, stu_num):
                 switch_status[switch_num - 1] = 0
             else:
                 switch_status[switch_num - 1] = 1
-
-            for j in range(Switch // 2):
-                if 0 <= switch_num-2-j < Switch and 0 <= switch_num+j < Switch:
-                    if switch_status[switch_num-2-j] == switch_status[switch_num+j]:
-
-                        if switch_status[switch_num - 2 - j] == 1:
-                            switch_status[switch_num - 2 - j] = 0
-                        else:
-                            switch_status[switch_num - 2 - j] = 1
-
-                        if switch_status[switch_num + j] == 1:
-                            switch_status[switch_num + j] = 0
-                        else:
-                            switch_status[switch_num + j] = 1
-                    else:
+            if switch_num == 1 or switch_num == Switch:
+                continue
+            else:
+                for j in range(Switch // 2):
+                    if switch_num-2-j < 0 or switch_num+j >= Switch:
                         return
+                    elif 0 <= switch_num-2-j < Switch and 0 <= switch_num+j < Switch:
+                        if switch_status[switch_num-2-j] == switch_status[switch_num+j]:
+
+                            if switch_status[switch_num - 2 - j] == 1:
+                                switch_status[switch_num - 2 - j] = 0
+                            else:
+                                switch_status[switch_num - 2 - j] = 1
+
+                            if switch_status[switch_num + j] == 1:
+                                switch_status[switch_num + j] = 0
+                            else:
+                                switch_status[switch_num + j] = 1
+                        else:
+                            return
 
 
 main(Switch, stu_num)

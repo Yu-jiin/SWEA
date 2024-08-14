@@ -27,7 +27,7 @@ def main(Switch, stu_num):
             else:   # 스위치 번호가 2부터 총 스위치 개수 -1 이라면
                 for j in range(Switch // 2):    # 하나씩 넘어갈 범위 정해주기  j
                     if switch_num-2-j < 0 or switch_num+j >= Switch:    # 범위 넘어가는 순간 리턴
-                        return
+                        break
                     elif 0 <= switch_num-2-j < Switch and 0 <= switch_num+j < Switch:   # 범위내라면
                         if switch_status[switch_num-2-j] == switch_status[switch_num+j]:    # 만약 양옆이 같다면
 

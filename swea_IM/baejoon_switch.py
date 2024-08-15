@@ -1,5 +1,4 @@
-import sys
-sys.stdin = open('0814_test_input.txt')
+
 sw_count = int(input())
 sw_list = list(map(int, input().split()))
 student_count = int(input())

@@ -37,7 +37,7 @@ for tc in range(1, T+1):
         white += lst.count(2)
     print(f'#{tc} {black} {white}')
 
-
+# 빠빠이
 
 
 

@@ -3,10 +3,8 @@ for tc in range(1, T + 1):
     N, K = map(int, input().split())
     arr = [list(map(int, input().split())) for _ in range(N)]
 
-    # 정답 패턴 생성
     answer = [1] * K
 
-    # 행과 열 탐색
     result = 0
 
     # 행 탐색

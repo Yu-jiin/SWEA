@@ -22,13 +22,12 @@ for tc in range(1, T+1):
     # 열 탐색
     count2 = 0
     for j in range(N+2):
-        for i in range(N+2):
-            col = [new_arr[i][j] for i in range(N + 2)]
-            for s in range(len(new_arr) - answer_len + 1):
-                e = s + answer_len
-                slice_part = col[s:e]
-                if slice_part == answer:
-                    count2 += 1
+        col = [new_arr[i][j] for i in range(N + 2)]
+        for s in range(N+2 - answer_len + 1):
+            e = s + answer_len
+            slice_part = col[s:e]
+            if slice_part == answer:
+                count2 += 1
 
     result = count + count2
 

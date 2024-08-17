@@ -17,10 +17,13 @@ def bcount(cnt):
 
     # if bingo_copy[4][0]==1 and bingo_copy[3][1]==1 and bingo_copy[2][2]==1 and bingo_copy[1][3]==1 and bingo_copy[0][4]==1:
     #     cnt += 1
+
     b_count = 0
-    for i in range(N-1):
-
-
+    for i in range(N):
+        if bingo_copy[i][N-1-i] == 1:
+            b_count += 1
+        if b_count == 5:
+            cnt += 1
 
     return cnt
 

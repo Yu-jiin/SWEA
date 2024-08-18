@@ -15,5 +15,4 @@ for tc in range(1, T+1):
         if max_len < len(carrot):
             max_len = len(carrot)
 
-
     print(f'#{tc} {max_len}')

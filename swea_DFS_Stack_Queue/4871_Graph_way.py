@@ -1,24 +1,18 @@
-def DFS(S, V, arr):
-    visited = [0] * V + 1
-    stack = []
+def DFS(S, G, arr):
+    visited = [0] * (V + 1)
+    stack = [S]
     visited[S] = 1
-    v = S
-    global answer
 
-    while True:
+    while stack:
+        v = stack.pop()
+        if v == G:
+            return 1
         for w in arr[v]:
-            if w == G:
-                answer = 1
             if visited[w] == 0:
-                stack.append(v)
-                v = w
+                stack.append(w)
                 visited[w] = 1
-                break
-        else:
-            if stack:
-                v = stack.pop()
-            else:
-                break
+
+    return 0
 
 
 T = int(input())
@@ -33,6 +27,6 @@ for tc in range(1, T + 1):
         # print(arr)
     S, G = map(int, input().split())
 
-    answer = 0
+    result = DFS(S, G, arr)
 
-    print(f'#{tc} {DFS(S, V, arr)}')
+    print(f'#{tc} {result}')

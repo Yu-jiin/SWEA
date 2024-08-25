@@ -38,10 +38,26 @@
 #     check_maze(row, col)
 #
 #     print(f'#{tc} {result}')
-def find_maze(row, col):
-    visited[row][col] = 1
+def find_maze(start):
+    di = [0, 1, 0, -1]
+    dj = [-1, 0, 1, 0]
+    s, e = start[0], start[1]
 
-    while
+    stack = [(s, e)]
+
+    while stack:
+        s, e = stack.pop()
+        for x in range(4):
+            ni = s + di[x]
+            nj = e + dj[x]
+            if 0 <= ni < N and 0 <= nj < N:
+                if maze[ni][nj] == 3:
+                    return 1
+                elif maze[ni][nj] == 0:
+                    stack.append((ni, nj))
+                    maze[ni][nj] = 1
+
+    return 0
 
 
 T = 10
@@ -51,11 +67,14 @@ for test_case in range(1, T+1):
     maze = [list(map(int, input().strip())) for _ in range(N)]
 
     visited = [[0]*N for _ in range(N)]
-
+    start = []
     for i in range(N):
         for j in range(N):
             if maze[i][j] == 2:
-                row = i
-                col = j
+                start.append(i)
+                start.append(j)
+        if start:
+            break
 
-    find_maze(row, col)
+    result = find_maze(start)
+    print(f'#{tc} {result}')

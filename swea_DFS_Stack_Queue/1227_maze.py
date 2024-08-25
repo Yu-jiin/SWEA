@@ -38,4 +38,24 @@
 #     check_maze(row, col)
 #
 #     print(f'#{tc} {result}')
+def find_maze(row, col):
+    visited[row][col] = 1
 
+    while
+
+
+T = 10
+for test_case in range(1, T+1):
+    tc = int(input())
+    N = 100
+    maze = [list(map(int, input().strip())) for _ in range(N)]
+
+    visited = [[0]*N for _ in range(N)]
+
+    for i in range(N):
+        for j in range(N):
+            if maze[i][j] == 2:
+                row = i
+                col = j
+
+    find_maze(row, col)

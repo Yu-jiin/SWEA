@@ -19,3 +19,14 @@ for tc in range(1, T+1):
             i3 += 1
 
     print(f'#{tc}', *deck)
+
+# for tc in range(1, T + 1):
+#     N, M = map(int, input().split())
+#     arr = list(input().split())
+#
+#     # N개의 숫자로 이루어진 수열을 M번 이동
+#     for _ in range(M):
+#         arr.append(arr[0])
+#         arr.pop(0)
+#
+#     print(f'#{tc} {arr[0]}')

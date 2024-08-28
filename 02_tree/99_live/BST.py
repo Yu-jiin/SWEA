@@ -4,6 +4,7 @@
 '''
 
 #  너무 어려워서 죽고싶ㄷ ㅏ..............
+#  공부하면서 주석 달아보기 ...
 class Node:
     def __init__(self, key):
         self.key = key

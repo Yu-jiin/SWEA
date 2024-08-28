@@ -3,6 +3,7 @@
 3 5 1 2 7 4 -5
 '''
 
+#  너무 어려워서 죽고싶ㄷ ㅏ..............
 class Node:
     def __init__(self, key):
         self.key = key

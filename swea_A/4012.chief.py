@@ -17,5 +17,8 @@ for tc in range(1, T+1):
 
     min_food = float('inf')
 
+    # 식재료 선택 경우의 수 만들기
+
+
     food1 = check_food(1, 0)
     food2 = check_food(1, 0)

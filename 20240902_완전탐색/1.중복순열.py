@@ -14,22 +14,6 @@
 #
 # kfc(0)
 
-result = []
-
-
-def permutation(x):
-    if x == 3:
-        print(result)
-        return
-
-    for i in range(1, 7):
-        result.append(i)
-        permutation(x + 1)
-        result.pop()
-
-
-permutation(0)
-
 
 result1 = []
 
@@ -41,7 +25,7 @@ def permutation2(x):
 
     for i in range(1, 5):
         result1.append(i)
-        permutation(x + 1)
+        permutation2(x + 1)
         result1.pop()
 
 

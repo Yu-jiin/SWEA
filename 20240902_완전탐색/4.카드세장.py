@@ -15,6 +15,7 @@ def permu(lev):
     if lev == 5:
         if cont_three():
             cnt += 1
+
         return
 
     for i in range(4):

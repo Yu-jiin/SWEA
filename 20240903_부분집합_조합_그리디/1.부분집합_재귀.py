@@ -1,4 +1,5 @@
 arr = ['O', 'X']
+# arr = ['X', 'O']  순서바꾸기
 path = []
 name = ['MIN', 'CO', 'TIM']
 
@@ -7,7 +8,7 @@ name = ['MIN', 'CO', 'TIM']
 def print_name():
     print(path, end=' / ')
     print('{ ', end='')
-    for i in range(3):
+    for i in range(3):      # 3은 원소의개수
         if path[i] == 'O':
             print(name[i], end=' ')
     print('}')

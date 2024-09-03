@@ -11,3 +11,6 @@ for turn in range(n):
     left_person -= 1
 
 print(total)
+
+
+# 대기하는 경우 - 최소값부터 고려 오름차순 갈겨

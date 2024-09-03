@@ -48,4 +48,4 @@ for tc in range(1, T + 1):
     result = 0  # 결과를 초기화합니다.
     dfs(0, 0)  # 깊이 우선 탐색을 시작합니다.
 
-    print(f'#{tc} {result}')  # 각 테스트 케이스의 결과를 출력합니다.
+    print(f'#{tc} {result}')

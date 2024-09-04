@@ -10,6 +10,6 @@ for tc in range(1, T+1):
     high = len(lst) - 1
     # flag
     while low <= high:
-
+        pass
 
     print(f'#{tc} {cnt}')

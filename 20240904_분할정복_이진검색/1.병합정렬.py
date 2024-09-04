@@ -9,6 +9,7 @@ def merge_sort(m):
     right = m[mid:]  # 리스트의 뒤쪽 절반
 
     # 재귀적으로 왼쪽 부분과 오른쪽 부분을 정렬
+    # 어딜가나 재귀가 있너
     left = merge_sort(left)
     right = merge_sort(right)
 

@@ -20,7 +20,7 @@ def check(row, col):
         i -= 1
         j += 1
 
-    # # 왼쪽 대각선 확인
+    # # 왼쪽 대각선 확인           zip은 생각보다 엄청 느림
     # for i, j in zip(range(row - 1, -1, -1), range(col - 1, -1, -1)):
     #     if visited[i][j] == 1:
     #         return False
@@ -36,12 +36,12 @@ def check(row, col):
 def dfs(row):
     global cnt
 
-    if row == N:
+    if row == N:                    # 퀸 배치가 완료 된 경우
         cnt += 1
         return
 
     for col in range(N):
-        if check(row, col):
+        if check(row, col):         # 유망한가
             visited[row][col] = 1
             dfs(row + 1)
             visited[row][col] = 0  # Backtracking
@@ -55,4 +55,8 @@ for tc in range(1, T + 1):
 
     dfs(0)
     print(f'#{tc} {cnt}')
+
+# 메모리 아끼는 법
+# visited[row][col] = i
+# visited[row] = col
 

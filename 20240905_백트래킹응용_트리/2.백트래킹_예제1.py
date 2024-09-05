@@ -6,15 +6,16 @@ visited = []
 def dfs(level, sum):
     if level == len(arr):
         return
-
+    # 기저조건
     if sum > 10:
         return
-
+    # 기저조건 - 문제에서 발견하기 힘든 경우 다수
     if sum == 10:
         print(*visited)
         return
 
     for i in range(len(arr)):
+        # 가지치기 : 이미 사용한 숫자라면 생략쓰
         if arr[i] in visited:
             continue
 

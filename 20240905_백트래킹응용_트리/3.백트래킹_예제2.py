@@ -28,13 +28,17 @@ def dfs(level, sum, idx):
 # 버전2
 # 트리 구조처럼 사용하면 훨씬 쉽고 빠르다
 def dfs2(level, sum):
+
+    # 10 넘는경우
     if sum > 10:
         return
 
+    # 10 경우
     if sum == 10:
         print(*visited)
         return
 
+    # 10 넘지않는 경우
     # 모두 선택하지 않으면 합이 10이 넘지 못하므로
     # 기저조건 추가
     if level == len(arr):

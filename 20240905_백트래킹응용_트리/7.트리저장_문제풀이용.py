@@ -21,4 +21,13 @@ def preorder(nodeNum):
     preorder(nodes[nodeNum][0])
     preorder(nodes[nodeNum][1])
 
+
 preorder(1)
+
+# 트리는 싸이클이 없는 무향 연결 그래프이다.
+#  무향 - 방향이 없다 == 양방향
+#   - 두 노드 사이에는 유일한 경로가 존재
+#   - 최대 하나의 부모노드가 존재
+#   - 자식노드가 없거나 하나 이상이 존재
+
+#  사이클 - 뱅글뱅글 돌기

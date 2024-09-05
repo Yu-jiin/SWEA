@@ -13,7 +13,7 @@ def check(row):
 def dfs(row):
     global cnt
 
-    if row == N:
+    if row == N:            # 퀸들을 모두 배치한 경우 row == N
         cnt += 1
         return
 

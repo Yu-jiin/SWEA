@@ -7,11 +7,13 @@ min_heap = []
 
 for el in arr:
     heappush(min_heap, el)
+    print(min_heap)
 
 print(min_heap)  # [4, 13, 11, 20, 15, 19] 출력
 
 while len(min_heap) > 0:
     print(heappop(min_heap), end=' ')
+    print(min_heap)
 
 print()
 

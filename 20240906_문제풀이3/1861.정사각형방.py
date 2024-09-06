@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input.txt', 'r')
+sys.stdin = open('1861.txt', 'r')
 
 # 접근방법2
 # 1. 전체 배열을 순회하면서 확인한다.

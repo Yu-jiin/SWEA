@@ -11,6 +11,7 @@ def dfs(i):
         dfs(i-1)
     else:
         arr[i-1]-1
+        dfs(i-1)
 
 
 T = int(input())

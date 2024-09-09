@@ -5,6 +5,7 @@
 0 5 1 6
 '''
 
+answer = []
 T = int(input())
 for tc in range(1, T+1):
     arr = list(map(int, input().split()))
@@ -17,3 +18,8 @@ for tc in range(1, T+1):
         for j in range(len(B)):
             if A[i] == B[j]:
                 result += 1
+
+    answer.append(result)
+
+for idx, result in enumerate(answer):
+    print(f'#{idx + 1} {result}')

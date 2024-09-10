@@ -18,8 +18,9 @@ def union(x, y):
         return
 
     # 다른 집합이라면 더 작은 루트노트에 합친다.
+    # 문제에 따라 다름
     if root_x < root_y:
-        parents[y] = root_x
+        parents[y] = root_x     # y가 바라보는 부모는 x의 대표자
     else:
         parents[x] = root_y
 

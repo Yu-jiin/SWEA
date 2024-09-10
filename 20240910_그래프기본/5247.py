@@ -27,3 +27,10 @@ for tc in range(1, int(input())+1):
     N, M = map(int, input().split())
     result = bfs()
     print(f'#{tc} {result}')
+
+'''
+3
+2 7
+3 15
+36 1007
+'''

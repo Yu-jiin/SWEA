@@ -15,6 +15,7 @@
 
 from heapq import heappush, heappop
 
+
 def prim(start):
     heap = list()
     MST = [0] * (V)
@@ -24,6 +25,7 @@ def prim(start):
 
     # 힙에서 관리해야 할 데이터
     # 가중치, 정점 정보
+    # 정점 가중치 이렇게 넣으면 정점번호를 기준으로 정렬되기 때문에 NO heappush(heap,(start ,0)) 금지
     heappush(heap, (0, start))
 
     while heap:
@@ -55,6 +57,9 @@ def prim(start):
 
 V, E = map(int, input().split())
 graph = [[0] * (V) for _ in range(V)]
+# [선택과제] 인접리스트로 변경
+
+
 for _ in range(E):
     u, v, w = map(int, input().split())
     graph[u][v] = w

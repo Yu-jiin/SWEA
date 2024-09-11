@@ -56,8 +56,13 @@ def prim(start):
 
 
 V, E = map(int, input().split())
-graph = [[0] * (V) for _ in range(V)]
+graph = [[0] * V for _ in range(V)]
 # [선택과제] 인접리스트로 변경
+# 인접리스트 -------------------------
+for _ in range(E):
+    u, v = map(int, input().split())
+    graph[u].append(v)
+    graph[v].append(u)
 
 
 for _ in range(E):

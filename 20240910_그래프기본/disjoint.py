@@ -10,9 +10,9 @@ def union(x, y):
 
     if root_x != root_y:
         if rank[root_x] > rank[root_y]:
-            parent[root_y] = root_x
+            parent[y] = root_x
         elif rank[root_x] < rank[root_y]:
-            parent[root_x] = root_y
+            parent[x] = root_y
         else:
             parent[root_y] = root_x
             rank[root_x] += 1

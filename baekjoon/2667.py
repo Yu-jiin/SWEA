@@ -4,9 +4,9 @@ def dfs(x, y):
     arr[x][y] = 0
     cnt += 1
 
-    for i in range(4):
-        ni = x + di[x]
-        nj = y + dj[x]
+    for a in range(4):
+        ni = x + di[a]
+        nj = y + dj[a]
         if ni < 0 or ni >= N or nj < 0 or nj >= N:
             continue
         if arr[ni][nj] == 1:
@@ -14,7 +14,7 @@ def dfs(x, y):
 
 
 N = int(input())
-arr = [list(map(int, input().split())) for _ in range(N)]
+arr = [list(map(int, input())) for _ in range(N)]
 
 di = [0, 1, 0, -1]
 dj = [-1, 0, 1, 0]
@@ -28,4 +28,7 @@ for i in range(N):
             result.append(cnt)
 
 
-print(cnt)
+print(len(result))
+result.sort()
+for r in result:
+    print(r)
